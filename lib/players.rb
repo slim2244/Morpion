@@ -1,12 +1,19 @@
+
+require_relative 'board'
+
+def initialize
+
+  @box = Board.tab
+
+end
+
 class Players
-def player_1
+
+def player_1(cell)
+
   puts "#{@name_1} c'est ton tour"
   puts #---------------------#
   puts " Choissisez une case entre 1 et 9"
-  
-  
-    # position = gets.chomp.to_i
-    # token = "X"
   
   while
     position = gets.chomp.to_i
@@ -16,31 +23,31 @@ def player_1
     case position 
       
         when 1 
-          return box[position] = token
+          @box[position] = token
           break
         when 2 
-          box[position] = token
+          @box[position] = token
           break
         when 3 
-          box[position] = token
+          @box[position] = token
           break
         when 4 
-          box[position] = token
+          @@box[position] = token
           break
         when 5 
-          box[position] = token
+          @box[position] = token
           break
         when 6 
-          box[position] = token
+          @box[position] = token
           break
         when 7 
-          box[position] = token
+          @box[position] = tokenn
           break
         when 8 
-          box[position] = token
+          @box[position] = token
           break
         when 9 
-          box[position] = token
+          @box[position] = token
           break
         else 
         puts "Erreur"
@@ -51,48 +58,45 @@ def player_1
   
   end 
   
-  def player_2(box)
+  def player_2(cell)
     puts "#{@name_2} c'est ton tour"
     puts #---------------------#
     puts " Choissisez une case entre 1 et 9"
     
     
-      # position = gets.chomp.to_i
-      # token = "X"
-    
     while
       position = gets.chomp.to_i
-      token = "0"
+      token = "O"
       puts "Veuillez saisir la case"
       
       case position 
         
           when 1 
-            return box[position] = token
+            @box[position] = token
             break
           when 2 
-            box[position] = token
+            @box[position] = token
             break
           when 3 
-            box[position] = token
+            @box[position] = token
             break
           when 4 
-            box[position] = token
+            @box[position] = token
             break
           when 5 
-            box[position] = token
+            @box[position] = token
             break
           when 6 
-            box[position] = token
+            @box[position] = token
             break
           when 7 
-            box[position] = token
+            @box[position] = token
             break
           when 8 
-            box[position] = token
+            @box[position] = token
             break
           when 9 
-            box[position] = token
+            @box[position] = token
             break
           else 
           puts "Erreur"

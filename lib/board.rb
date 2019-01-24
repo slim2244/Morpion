@@ -1,17 +1,27 @@
-def board(array)
-	
+
+
+
+class Board
+
+  
+  def box
+
+    @box = Array.new(10, " ") 
+  
+  end
+
+  def tab
   
   puts "Jouons au Morpion !"
 	puts " "
 	puts " "
-	puts "| #{array[1]} | #{array[2]} | #{array[3]} |"
+	puts "| #{@box[1]} | #{@box[2]} | #{@box[3]} |"
 	puts "----------------------------------"
-	puts "| #{array[4]} | #{array[5]} | #{array[6]} |"
+	puts "| #{@box[4]} | #{@box[5]} | #{@box[6]} |"
 	puts "----------------------------------"
-	puts "| #{array[7]} | #{array[8]} | #{array[9]} |"
+	puts "| #{@box[7]} | #{@box[8]} | #{@box[9]} |"
 	
 end 
 
-def cell
-box = Array.new(10, " ") 
+
 end
