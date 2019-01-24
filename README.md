@@ -10,5 +10,5 @@ Tu vas commencer par ouvrir le dossier puis écrire sur ton terminal "ruby app.r
 
 Contributeur :
 
-Sébastien LIM 
-Jordan Aumis
+...Sébastien LIM 
+...Jordan Aumis
