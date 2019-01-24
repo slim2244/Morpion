@@ -3,7 +3,7 @@ require 'pry'
 box = Array.new(10, " ") 
 
 def board(array)
-
+	box = Array.new(10, " ") 
 	puts "Jouons au Morpion !"
 	puts " "
 	puts " "
@@ -73,14 +73,56 @@ while
 end 
 
 def player_2(box)
-
-puts " Choissisez la case"
-position = gets.chomp.to_i
-token = "O"
-box[position] = token
-
-end 
-
+	puts "joueur 2 c'est ton tour"
+	puts #---------------------#
+	puts " Choissisez une case entre 1 et 9"
+	
+	
+		# position = gets.chomp.to_i
+		# token = "X"
+	
+	while
+		position = gets.chomp.to_i
+		token = "0"
+		puts "Veuillez saisir la case"
+		
+		case position 
+			
+				when 1 
+					return box[position] = token
+					break
+				when 2 
+					box[position] = token
+					break
+				when 3 
+					box[position] = token
+					break
+				when 4 
+					box[position] = token
+					break
+				when 5 
+					box[position] = token
+					break
+				when 6 
+					box[position] = token
+					break
+				when 7 
+					box[position] = token
+					break
+				when 8 
+					box[position] = token
+					break
+				when 9 
+					box[position] = token
+					break
+				else 
+				puts "Erreur"
+				
+			end 
+	
+		end 
+	
+	end 
 
 binding pry
 
