@@ -16,17 +16,13 @@ class Morpion
   
   def perform
 
-puts @intro.menu
+	puts @intro.menu
 
-puts "Joueur 1 quel est votre nom :"
-print "> "
-@name_1 = gets.chomp
+	puts @players.play_name
 
-puts "Joueur 2 quel est votre nom :"
-print "> "
-@name_2 = gets.chomp
+	puts @board.table(@box)
 
-puts @board.tab
+	puts @board.player_1(@box)
 
 
   end

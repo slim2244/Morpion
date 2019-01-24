@@ -1,21 +1,26 @@
 class Board
 
-	@box = Array.new(10, " ")
+	# @box = Array.new(10, " ")
 
-  def tab(array)	
+  def table(array)
+
+    array = Array.new(10, " ")
   
-  puts "Jouons au Morpion !"
+  puts "--------------------------------------------------------------------------------------------------------------"
+  puts        "Jouons au Morpion !"
+  puts "--------------------------------------------------------------------------------------------------------------"
 	puts " "
 	puts " "
-	puts "| #{@box[1]} | #{@box[2]} | #{@box[3]} |"
+	puts "| #{array[1]} | #{array[2]} | #{array[3]} |"
 	puts "-------------------------"
-	puts "| #{@box[4]} | #{@box[5]} | #{@box[6]} |"
+	puts "| #{array[4]} | #{array[5]} | #{array[6]} |"
 	puts "-------------------------"
-	puts "| #{@box[7]} | #{@box[8]} | #{@box[9]} |"
+	puts "| #{array[7]} | #{array[8]} | #{array[9]} |"
 	
 end 
 
 def player_1(box)
+
 
   puts "Joueur 1 c'est ton tour"
   puts #---------------------#
