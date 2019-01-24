@@ -38,6 +38,10 @@ class Board
 end 
 
 def player_1
+
+     puts "#Joueur 1 c'est ton tour"
+     puts "----------------------------------------"
+     puts " Choissisez une case "
  
   while true
 
@@ -85,6 +89,10 @@ def player_1
   
   def player_2
 
+    puts "Joueur 2 c'est ton tour"
+    puts "----------------------------------------"
+    puts " Choissisez une case "
+
     while
       position = gets.chomp
       token = "O"
@@ -128,4 +136,36 @@ def player_1
     
     end
 
-end
+    def winning 
+
+      winning_combinaison = [[@a1, @a2, @a3],[@a1, @b2, @c3],[@a1, @b1, @c1],[@b1, @b2, @b3],[@c1, @c2, @c3],[@c1, @b2, @a3],[@a2, @b2, @c2],[@a3, @b3, @c3]]
+
+      winning_combinaison.each do |set|
+
+        if set == "0"
+          puts "Joueur 2 a gagné"
+            exit
+        elsif set == "X"
+          puts "Joueur 1 a gagné"
+            exit
+        end   
+
+      end      
+
+    end 
+
+      def game_initialize
+
+        player_1
+
+        table 
+
+        player_2
+
+        table 
+
+        winning
+
+      end 
+
+end 

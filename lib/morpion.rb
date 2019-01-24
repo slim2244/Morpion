@@ -12,11 +12,10 @@ class Morpion
     @players = Players.new
     @board = Board.new
   
-  end
-  
-  def perform
+  	end
 
-  	
+  def menu_start
+
 
 	puts @intro.menu
 
@@ -24,32 +23,24 @@ class Morpion
 
 	puts @board.table
 
+	end 
+
+  
+  def perform
+
+  	menu_start
+
 	n = 0
 
-	while n < 9 
-
-	 puts "#Joueur 1 c'est ton tour"
- 	 puts "----------------------------------------"
-  	 puts " Choissisez une case "
-
-	puts @board.player_1
-
-	puts @board.table 
-
-	puts "Joueur 2 c'est ton tour"
-    puts "----------------------------------------"
-    puts " Choissisez une case "
-	puts @board.player_2
-
-	puts @board.table 
+	while n = 9 
 
 	n += 1
+
+	@board.game_initialize
 
 	end 
 
 
   end
 
-end
-# binding.pry
-puts ' '
+end 
