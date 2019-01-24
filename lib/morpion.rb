@@ -2,7 +2,7 @@ require 'bundler'
 Bundler.require
 require_relative 'players'
 require_relative 'intro'
-# require_relative 'board'
+require_relative 'board'
 
 class Morpion
   
@@ -10,11 +10,12 @@ class Morpion
 
     @intro = Intro.new
     @players = Players.new
-    
+    @board = Board.new
   
   end
   
   def perform
+
 puts @intro.menu
 
 puts "Joueur 1 quel est votre nom :"
@@ -25,7 +26,8 @@ puts "Joueur 2 quel est votre nom :"
 print "> "
 @name_2 = gets.chomp
 
-@players.player_1("yo")
+puts @board.tab
+
 
   end
 
