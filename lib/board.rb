@@ -1,8 +1,25 @@
 class Board
 
-	# @box = Array.new(10, " ")
+  def new_board
 
-  def table(array)
+    @a1 = " "
+    @a2 = " "
+    @a3 = " "
+    @b1 = " "
+    @b2 = " "
+    @b3 = " "
+    @c1 = " "
+    @c2 = " "
+    @c3 = " "
+  end
+
+  def self.squares
+
+    [@a1, @a2, @a3, @b1, @b2, @b3, @c1, @c2, @c3]
+
+  end 
+
+  def table
 
     array = Array.new(10, " ")
   
@@ -11,57 +28,54 @@ class Board
   puts "--------------------------------------------------------------------------------------------------------------"
 	puts " "
 	puts " "
-	puts "| #{array[1]} | #{array[2]} | #{array[3]} |"
-	puts "-------------------------"
-	puts "| #{array[4]} | #{array[5]} | #{array[6]} |"
-	puts "-------------------------"
-	puts "| #{array[7]} | #{array[8]} | #{array[9]} |"
+  puts "        1   2   3"
+	puts "   A  |  #{@a1}  |  #{@a2}  |  #{@a3}  |"
+	puts "     ------------------"
+	puts "   B  |  #{@b1}  |  #{@b2}  |  #{@b3}  |"
+	puts "     ------------------"
+	puts "   C  |  #{@c1}  |  #{@c2}  |  #{@c3}  |"
 	
 end 
 
-def player_1(box)
-
-
-  puts "Joueur 1 c'est ton tour"
-  puts #---------------------#
-  puts " Choissisez une case entre 1 et 9"
-  
+def player_1
+ 
   while true
-    position = gets.chomp.to_i
-    token = "X"
+
+    position = gets.chomp
     puts "Veuillez saisir la case"
     
     case position 
       
-        when 1 
-          box[position] = token
+        when "a1" 
+          @a1 = "X"
           break
-        when 2 
-          box[position] = token
+        when "a2" 
+           @a2 = "X"
           break
-        when 3 
-          box[position] = token
+        when "a3" 
+          @a3 = "X"
           break
-        when 4 
-          box[position] = token
+        when "b1" 
+          @b1 = "X"
           break
-        when 5 
-          box[position] = token
+        when "b2" 
+          @b2 = "X"
           break
-        when 6 
-          box[position] = token
+        when "b3" 
+          @b3 = "X"
           break
-        when 7 
-          box[position] = tokenn
+        when "c1" 
+          @c1 = "X"
           break
-        when 8 
-          box[position] = token
+        when "c2" 
+          @c2 = "X"
           break
-        when 9 
-          box[position] = token
+        when "c3" 
+          @c3 = "X"
           break
         else 
-        puts "Erreur"
+        puts "Ah bah alors on ne sait pas lire ?"
+        puts "Veuillez saisir la case"
         
       end 
   
@@ -69,53 +83,46 @@ def player_1(box)
   
   end 
   
-  def player_2(box)
+  def player_2
 
-  	box = tab
-
-    puts "Joueur 2 c'est ton tour"
-    puts #---------------------#
-    puts " Choissisez une case entre 1 et 9"
-    
-    
     while
-      position = gets.chomp.to_i
+      position = gets.chomp
       token = "O"
       puts "Veuillez saisir la case"
-      
       case position 
+      
+        when "a1" 
+          @a1 = "0"
+          break
+        when "a2" 
+           @a2 = "0"
+          break
+        when "a3" 
+          @a3 = "0"
+          break
+        when "b1" 
+          @b1 = "0"
+          break
+        when "b2" 
+          @b2 = "0"
+          break
+        when "b3" 
+          @b3 = "0"
+          break
+        when "c1" 
+          @c1 = "0"
+          break
+        when "c2" 
+          @c2 = "0"
+          break
+        when "c3" 
+          @c3 = "0"
+          break
+        else 
+        puts "Ah bah alors on ne sait pas lire ?"
+        puts "Veuillez saisir la case"
         
-          when 1 
-            box[position] = token
-            break
-          when 2 
-            box[position] = token
-            break
-          when 3 
-            box[position] = token
-            break
-          when 4 
-            @box[position] = token
-            break
-          when 5 
-            @box[position] = token
-            break
-          when 6 
-            @box[position] = token
-            break
-          when 7 
-            @box[position] = token
-            break
-          when 8 
-            @box[position] = token
-            break
-          when 9 
-            @box[position] = token
-            break
-          else 
-          puts "Erreur"
-          
-        end 
+      end 
     
       end 
     

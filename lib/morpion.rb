@@ -16,17 +16,40 @@ class Morpion
   
   def perform
 
+  	
+
 	puts @intro.menu
 
 	puts @players.play_name
 
-	puts @board.table(@box)
+	puts @board.table
 
-	puts @board.player_1(@box)
+	n = 0
+
+	while n < 9 
+
+	 puts "#Joueur 1 c'est ton tour"
+ 	 puts "----------------------------------------"
+  	 puts " Choissisez une case "
+
+	puts @board.player_1
+
+	puts @board.table 
+
+	puts "Joueur 2 c'est ton tour"
+    puts "----------------------------------------"
+    puts " Choissisez une case "
+	puts @board.player_2
+
+	puts @board.table 
+
+	n += 1
+
+	end 
 
 
   end
 
 end
-binding.pry
+# binding.pry
 puts ' '
