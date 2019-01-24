@@ -21,38 +21,51 @@ end
 #Class Joueur
 
 def player_1(box)
+puts "joueur 1 c'est ton tour"
+puts #---------------------#
+puts " Choissisez une case entre 1 et 9"
 
-puts " Choissisez la case entre 1 et 9"
 
+	# position = gets.chomp.to_i
+	# token = "X"
 
+while
 	position = gets.chomp.to_i
 	token = "X"
-
-while false
-
-		case position 
+	puts "Veuillez saisir la case"
+	
+	case position 
+		
 			when 1 
-				box[position] = token
+				return box[position] = token
+				break
 			when 2 
 				box[position] = token
+				break
 			when 3 
 				box[position] = token
+				break
 			when 4 
 				box[position] = token
+				break
 			when 5 
 				box[position] = token
+				break
 			when 6 
 				box[position] = token
+				break
 			when 7 
 				box[position] = token
+				break
 			when 8 
 				box[position] = token
+				break
 			when 9 
 				box[position] = token
 				break
 			else 
 			puts "Erreur"
-			puts "Veuillez saisir la case"
+			
 		end 
 
 	end 
