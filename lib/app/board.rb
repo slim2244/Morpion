@@ -1,6 +1,7 @@
 class Board
 
-  def new_board
+#----------------------------- Creation des variables pour la table de jeu -----------------------------------------------------
+  def new_board 
 
     @a1 = " "
     @a2 = " "
@@ -13,12 +14,14 @@ class Board
     @c3 = " "
   end
 
+#----------------------------- Array des variables pour la table de jeu -----------------------------------------------------
   def self.squares
 
     [@a1, @a2, @a3, @b1, @b2, @b3, @c1, @c2, @c3]
 
   end 
 
+#----------------------------- La table de jeu ------------------------------------------------------------------------------
   def table
 
     array = Array.new(10, " ")
@@ -36,6 +39,8 @@ class Board
 	puts "   C  |  #{@c1}  |  #{@c2}  |  #{@c3}  |"
 	
 end 
+
+#----------------------------- Parametre du joueur 1 -------------------------------------------------------------------------
 
 def player_1
 
@@ -87,6 +92,8 @@ def player_1
   
   end 
   
+#----------------------------- Parametre du joueur 2 -------------------------------------------------------------------------
+
   def player_2
 
     puts "Joueur 2 c'est ton tour"
@@ -135,7 +142,7 @@ def player_1
       end 
     
     end
-
+#----------------------------- Condition pour gagner la partie -------------------------------------------------------------------------
     def winning 
 
       winning_combinaison = [[@a1, @a2, @a3],[@a1, @b2, @c3],[@a1, @b1, @c1],[@b1, @b2, @b3],[@c1, @c2, @c3],[@c1, @b2, @a3],[@a2, @b2, @c2],[@a3, @b3, @c3]]
@@ -153,6 +160,8 @@ def player_1
       end      
 
     end 
+
+    #-----------------------------  Le déroulement du jeu -------------------------------------------------------------------------
 
       def game_initialize
 
